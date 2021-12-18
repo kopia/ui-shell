@@ -21,6 +21,9 @@ jobs:
       with:
         go-version: ^1.17
       id: go
+    - name: Install Linux-specific packages
+      run: "sudo apt install -y webkit2gtk-4.0"
+      if: ${{ contains(matrix.os, 'ubuntu-latest') }}
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
       with:
