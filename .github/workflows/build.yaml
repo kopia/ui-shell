@@ -41,8 +41,7 @@ jobs:
       with:
         name: binaries
         path: |
-          dist/**/kopia
-          dist/**/kopia.exe
+          dist/**
         if-no-files-found: ignore
   publish:
     name: Stage And Publish Artifacts
